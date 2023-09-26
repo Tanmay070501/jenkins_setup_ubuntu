@@ -26,11 +26,13 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update -y
 
-
+# Installing docker packages
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin 
 
+# Creating container of jenkins 
 sudo docker run -d -p 8080:8080 -p 50000:50000 --name jenkins -v /var/run/docker.sock:/var/run/docker.sock --user root jenkins/jenkins:lts
 
+# To allow jenkins container to run docker commands on docker that exists outside jenkins container
 sudo docker exec -it jenkins bash -c "apt update -y; apt install -y docker.io"
 
 sudo docker logs jenkins
