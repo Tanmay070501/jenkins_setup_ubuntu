@@ -1,3 +1,4 @@
+
 # Jenkins Installation and Setup Guide
 
 This guide will walk you through the process of installing Jenkins on an Ubuntu server.
@@ -23,3 +24,14 @@ sudo chmod +x jenkins_setup_ubuntu/setup.sh
 
 # 5. Run the setup script to install Jenkins:
 ./jenkins_setup_ubuntu/setup.sh
+```
+This script will automate the installation and setup of Jenkins on your Ubuntu server. Follow the on-screen instructions if any.
+
+## Accessing Jenkins
+
+Once the setup is complete, you can access Jenkins by opening a web browser and navigating to:
+
+```bash
+http://your_server_ip:8080`
+```
+Note: Don't forget to expose the server's port no. 8080
