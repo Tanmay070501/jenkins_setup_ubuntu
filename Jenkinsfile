@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build and Run Docker Container') {
+        stage('List of docker containers') {
             steps {
                 script {
                     sh 'docker ps -a'
