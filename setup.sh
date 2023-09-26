@@ -15,7 +15,7 @@ fi
 
 
 sudo apt-get install -y ca-certificates curl gnupg 
-sudo install -y -m 0755 -d /etc/apt/keyrings
+sudo install -m 0755 -d /etc/apt/keyrings -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg -y
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
